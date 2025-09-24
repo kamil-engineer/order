@@ -34,6 +34,15 @@
   src: url("../fonts/red-hat-display-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* red-hat-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/red-hat-display-v21-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
@@ -81,4 +90,191 @@
 
 body {
   font-family: var(--font-general);
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("../images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  background-color: var(--color-blue-100);
+}
+
+.card {
+  overflow: hidden;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 15.18%);
+
+  width: 100%;
+  max-width: 28.125rem;
+  min-height: 43.5625rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__content {
+  text-align: center;
+  max-width: 22.125rem;
+  max-height: 24.125rem;
+  margin: 0 auto;
+}
+
+.card__title {
+  font-weight: 900;
+  line-height: 135%;
+  font-size: var(--fs-sub);
+  color: var(--color-blue-950);
+  margin-bottom: var(--space-4);
+}
+
+.card__description {
+  font-weight: 500;
+  line-height: 165%;
+  font-size: var(--fs-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-4);
+}
+
+.music {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  border-radius: 11px;
+  background-color: var(--color-blue-50);
+  margin-bottom: var(--space-6);
+}
+
+.music__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.music__actual {
+  color: var(--color-blue-950);
+  font-size: var(--fs-sm);
+  line-height: 165%;
+  font-weight: 900;
+}
+
+.music__cost {
+  color: var(--color-gray-600);
+  font-size: var(--fs-sm);
+  line-height: 165%;
+  font-weight: 500;
+}
+
+.link:link,
+.link:visited {
+  text-decoration: none;
+  display: inline-block;
+
+  transition: 0.3s;
+}
+
+.link--change:link,
+.link--change:visited {
+  margin-left: auto;
+  color: var(--color-blue-700);
+  font-size: var(--fs-sm);
+  line-height: 165%;
+  font-weight: 700;
+}
+
+.link--change:hover {
+  color: var(--color-purple-500);
+}
+
+.link--proceed:link,
+.link--proceed:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3.125rem;
+  font-size: var(--fs-sm);
+  line-height: 165%;
+  font-weight: 900;
+  color: var(--color-white);
+  background-color: var(--color-blue-700);
+  border-radius: 11px;
+  box-shadow: 0 20px 20px rgba(56, 42, 225, 19.03%);
+}
+
+.link--proceed:hover {
+  background-color: var(--color-purple-500);
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+
+  transition: 0.3s;
+}
+
+.btn--cancel {
+  font-size: var(--fs-sm);
+  line-height: 165%;
+  font-weight: 900;
+  color: var(--color-gray-600);
+}
+
+.btn--cancel:hover {
+  color: var(--color-blue-950);
+}
+
+@media (max-width: 36rem) {
+  .content {
+    background-image: url("../images/pattern-background-mobile.svg");
+  }
+
+  .card {
+    max-width: 20.4375rem;
+    min-height: 35.4375rem;
+    gap: var(--space-6);
+  }
+
+  .card__content {
+    max-width: 17.4375rem;
+  }
+
+  .card__title {
+    font-size: var(--fs-lg);
+  }
+
+  .card__description {
+    font-size: var(--fs-xs);
+    margin-bottom: var(--space-5);
+  }
+
+  .music {
+    padding: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .music__actual,
+  .music__cost {
+    font-size: var(--fs-xs);
+  }
+
+  .music__actions {
+    gap: var(--space-5);
+  }
 }
