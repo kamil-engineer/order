@@ -1,0 +1,84 @@
+/* red-hat-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/red-hat-display-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-display-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/red-hat-display-v21-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-display-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/red-hat-display-v21-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-display-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/red-hat-display-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-gray-600: #717fa6;
+  --color-purple-500: #766cf1;
+  --color-blue-950: #1f2e55;
+  --color-blue-700: #382ae1;
+  --color-blue-150: #d6e1ff;
+  --color-blue-100: #e0e8ff;
+  --color-blue-50: #f7f9ff;
+
+  --font-general: "Red Hat Display", "sans-serif";
+
+  --fs-xxs: 0.75rem; /* 12px */
+  --fs-xs: 0.9375rem; /* 15px */
+  --fs-sm: 1rem; /* 16px */
+  --fs-md: 1.125rem; /* 18px */
+  --fs-lg: 1.375rem; /* 22px */
+  --fs-sub: 1.75rem; /* 28px */
+  --fs-xl: 1.875rem; /* 30px */
+  --fs-2xl: 2.25rem; /* 36px */
+  --fs-3xl: 3rem; /* 48px */
+  --fs-4xl: 3.5rem; /* 56px */
+  --fs-5xl: 4.5rem; /* 72px */
+
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem; /* 32px */
+  --space-7: 3rem; /* 48px */
+  --space-8: 4rem; /* 64px */
+  --space-9: 6rem; /* 96px */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-general);
+}
